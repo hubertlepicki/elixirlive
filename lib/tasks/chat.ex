@@ -3,7 +3,7 @@ defmodule Mix.Tasks.Chat do
 
   @shortdoc "Starts a conversation with a bot"
   def run(_) do
-    IO.puts "Hello world!"
+    Chatbot.Cli.run
   end
 end
 
