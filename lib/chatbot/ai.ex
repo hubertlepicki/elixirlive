@@ -1,13 +1,14 @@
 defmodule Chatbot.Ai do
+  @responses [
+    "Hodor",
+    "Hodor, hodor",
+    "...hodor",
+    "Hodor?",
+    "Hodor!",
+    "Hodor, hodor, hodor"
+  ]
+
   def interpret(text) do
-    responses = [
-      "Hodor",
-      "Hodor, hodor",
-      "...hodor",
-      "Hodor?",
-      "Hodor!",
-      "Hodor, hodor, hodor"
-    ]
-    Enum.random(responses)
+    Enum.random(@responses)
   end
 end
