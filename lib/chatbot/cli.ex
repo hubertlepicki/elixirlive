@@ -4,8 +4,7 @@ defmodule Chatbot.Cli do
   end
 
   defp loop do
-    IO.gets "> "
-    IO.puts "Hodor"
+    IO.puts Chatbot.Ai.interpret(IO.gets "> ")
 
     loop
   end
