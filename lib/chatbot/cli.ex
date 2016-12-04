@@ -8,10 +8,14 @@ defmodule Chatbot.Cli do
   end
 
   defp loop do
-    gets("> ")
-    |> trim()
-    |> Ai.interpret()
-    |> puts()
+    try do
+      gets("> ")
+      |> trim()
+      |> Ai.interpret()
+      |> puts()
+    catch
+      :exit, _value -> :rescued
+    end
 
     loop
   end
