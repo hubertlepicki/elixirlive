@@ -1,18 +1,10 @@
 defmodule Chatbot.Ai do
-  @responses [
-    "Hodor",
-    "Hodor, hodor",
-    "...hodor",
-    "Hodor?",
-    "Hodor!",
-    "Hodor, hodor, hodor"
-  ]
-
-  def interpret("Hi!") do
-    "Nice to meet you! I'm Hodor"
-  end
+  alias Chatbot.Parser
+  alias Chatbot.Commands
 
   def interpret(text) do
-    Enum.random(@responses)
+    text
+    |> Parser.parse()
+    |> Commands.execute()
   end
 end
