@@ -13,8 +13,8 @@ defmodule Chatbot.Commands do
     exit(:shutdown)
   end
 
-  def execute(_) do
-    Enum.random(@hodor_speak)
-  end
+  #def execute(_) do
+  #  Enum.random(@hodor_speak)
+  #end
 end
 

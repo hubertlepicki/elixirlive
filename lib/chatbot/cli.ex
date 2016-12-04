@@ -4,7 +4,6 @@ defmodule Chatbot.Cli do
   alias Chatbot.Ai
 
   def run do
-    Chatbot.Ai.start_link(:ignore)
     loop()
   end
 
