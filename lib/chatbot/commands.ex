@@ -9,6 +9,10 @@ defmodule Chatbot.Commands do
     "Hello, my friend!"
   end
 
+  def execute({:exit, _text}) do
+    exit(:shutdown)
+  end
+
   def execute(_) do
     Enum.random(@hodor_speak)
   end
