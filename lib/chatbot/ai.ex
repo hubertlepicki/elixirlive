@@ -8,6 +8,10 @@ defmodule Chatbot.Ai do
     "Hodor, hodor, hodor"
   ]
 
+  def interpret("Hi!") do
+    "Nice to meet you! I'm Hodor"
+  end
+
   def interpret(text) do
     Enum.random(@responses)
   end
